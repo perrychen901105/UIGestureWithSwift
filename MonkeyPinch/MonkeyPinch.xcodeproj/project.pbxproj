@@ -13,6 +13,9 @@
 		C2A53DD51A8C510200A1A0BC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A53DD41A8C510200A1A0BC /* Images.xcassets */; };
 		C2A53DD81A8C510200A1A0BC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2A53DD61A8C510200A1A0BC /* LaunchScreen.xib */; };
 		C2A53DE41A8C510200A1A0BC /* MonkeyPinchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A53DE31A8C510200A1A0BC /* MonkeyPinchTests.swift */; };
+		C2A53DF11A8C83C900A1A0BC /* chomp.caf in Resources */ = {isa = PBXBuildFile; fileRef = C2A53DEF1A8C83C900A1A0BC /* chomp.caf */; };
+		C2A53DF21A8C83C900A1A0BC /* hehehe1.caf in Resources */ = {isa = PBXBuildFile; fileRef = C2A53DF01A8C83C900A1A0BC /* hehehe1.caf */; };
+		C2A53DF41A8C851D00A1A0BC /* TickleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A53DF31A8C851D00A1A0BC /* TickleGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,10 @@
 		C2A53DDD1A8C510200A1A0BC /* MonkeyPinchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyPinchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A53DE21A8C510200A1A0BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2A53DE31A8C510200A1A0BC /* MonkeyPinchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyPinchTests.swift; sourceTree = "<group>"; };
-		C2A53DED1A8C517F00A1A0BC /* chomp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chomp.caf; sourceTree = "<group>"; };
-		C2A53DEE1A8C517F00A1A0BC /* hehehe1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hehehe1.caf; sourceTree = "<group>"; };
+		C2A53DEF1A8C83C900A1A0BC /* chomp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chomp.caf; sourceTree = "<group>"; };
+		C2A53DF01A8C83C900A1A0BC /* hehehe1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hehehe1.caf; sourceTree = "<group>"; };
+		C2A53DF31A8C851D00A1A0BC /* TickleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickleGestureRecognizer.swift; sourceTree = "<group>"; };
+		C2A53DF51A8C86AC00A1A0BC /* MonkeyPinch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MonkeyPinch-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +69,6 @@
 				C2A53DCA1A8C510200A1A0BC /* MonkeyPinch */,
 				C2A53DE01A8C510200A1A0BC /* MonkeyPinchTests */,
 				C2A53DC91A8C510200A1A0BC /* Products */,
-				C2A53DED1A8C517F00A1A0BC /* chomp.caf */,
-				C2A53DEE1A8C517F00A1A0BC /* hehehe1.caf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,12 +84,16 @@
 		C2A53DCA1A8C510200A1A0BC /* MonkeyPinch */ = {
 			isa = PBXGroup;
 			children = (
+				C2A53DEF1A8C83C900A1A0BC /* chomp.caf */,
+				C2A53DF01A8C83C900A1A0BC /* hehehe1.caf */,
 				C2A53DCD1A8C510200A1A0BC /* AppDelegate.swift */,
 				C2A53DCF1A8C510200A1A0BC /* ViewController.swift */,
+				C2A53DF31A8C851D00A1A0BC /* TickleGestureRecognizer.swift */,
 				C2A53DD11A8C510200A1A0BC /* Main.storyboard */,
 				C2A53DD41A8C510200A1A0BC /* Images.xcassets */,
 				C2A53DD61A8C510200A1A0BC /* LaunchScreen.xib */,
 				C2A53DCB1A8C510200A1A0BC /* Supporting Files */,
+				C2A53DF51A8C86AC00A1A0BC /* MonkeyPinch-Bridging-Header.h */,
 			);
 			path = MonkeyPinch;
 			sourceTree = "<group>";
@@ -196,6 +203,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A53DF21A8C83C900A1A0BC /* hehehe1.caf in Resources */,
+				C2A53DF11A8C83C900A1A0BC /* chomp.caf in Resources */,
 				C2A53DD31A8C510200A1A0BC /* Main.storyboard in Resources */,
 				C2A53DD81A8C510200A1A0BC /* LaunchScreen.xib in Resources */,
 				C2A53DD51A8C510200A1A0BC /* Images.xcassets in Resources */,
@@ -217,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A53DD01A8C510200A1A0BC /* ViewController.swift in Sources */,
+				C2A53DF41A8C851D00A1A0BC /* TickleGestureRecognizer.swift in Sources */,
 				C2A53DCE1A8C510200A1A0BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,11 +350,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: chun long shen (E24HS4WTYK)";
 				INFOPLIST_FILE = MonkeyPinch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6000c690-df93-47be-9ee5-3726939f6e3e";
+				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyPinch/MonkeyPinch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,11 +365,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: chun long shen (E24HS4WTYK)";
 				INFOPLIST_FILE = MonkeyPinch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6000c690-df93-47be-9ee5-3726939f6e3e";
+				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyPinch/MonkeyPinch-Bridging-Header.h";
 			};
 			name = Release;
 		};

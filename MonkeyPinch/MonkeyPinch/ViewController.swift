@@ -7,11 +7,50 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    var hehePlayer: AVAudioPlayer? = nil
+    var chompPlayer: AVAudioPlayer? = nil
+    
+    @IBOutlet var bananaPan: UIPanGestureRecognizer!
+    @IBOutlet var monkeyPan: UIPanGestureRecognizer!
+    func loadSound(filename: NSString) -> AVAudioPlayer {
+        let url = NSBundle.mainBundle().URLForResource(filename, withExtension: "caf")
+        var error: NSError? = nil
+        let player = AVAudioPlayer(contentsOfURL: url, error: &error)
+        if error != nil {
+            println("Error loading \(url): \(error?.localizedDescription)")
+        } else {
+            player.prepareToPlay()
+        }
+        return player
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 1
+        // create a filtered array of just the monkey and banana image views
+        let filteredSubviews = self.view.subviews.filter({$0.isKindOfClass(UIImageView) })
+        
+        // 2
+        for view in filteredSubviews {
+            // 3
+            let recognizer = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+            // 4
+            recognizer.delegate = self
+            view.addGestureRecognizer(recognizer)
+            recognizer.requireGestureRecognizerToFail(monkeyPan)
+            recognizer.requireGestureRecognizerToFail(bananaPan)
+        }
+        self.chompPlayer = self.loadSound("chomp")
+        
+        let recognizer2 = TickleGestureRecognizer(target: self, action: Selector("handleTickle:"))
+        recognizer2.delegate = self
+        view.addGestureRecognizer(recognizer2)
+        
+        self.hehePlayer = self.loadSound("hehehe1")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,6 +62,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBAction func handlePan(sender: UIPanGestureRecognizer) {
     
+        // comment for panning
+        // uncomment for tickling
+        return
+        
         let translation = sender.translationInView(self.view)
         sender.view!.center = CGPoint(x: sender.view!.center.x + translation.x, y: sender.view!.center.y + translation.y)
         sender.setTranslation(CGPointZero, inView: self.view)
@@ -70,6 +113,15 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+    
+    func handleTap(recognizer: UITapGestureRecognizer) {
+        self.chompPlayer?.play()
+    
+    }
+    
+    func handleTickle(recognizer: TickleGestureRecognizer) {
+        self.hehePlayer?.play()
     }
     
 }
